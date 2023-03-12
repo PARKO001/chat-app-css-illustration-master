@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    /* (sub-heading at the top of the app UI) */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    /* -(chat on the left) */
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    /* (chat on the right) */
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    /* (placeholder text) */
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    /* (main heading) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (paragraph) */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+    /* #### Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    /* ### Secondary */
+    --White: hsl(0, 0%, 100%);
+    /* (app background) */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    /* (submit button background) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (radio button outline) */
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* general properties*/
+.flex_prop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 12px;
+}
+
+/*  */
+.background {
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    border-radius: 0 0 250px 250px;
+    z-index: 2;
+}
+
+#background1 {
+    background: linear-gradient(to right, var(--Light-Violet), var(--Light-Magenta));
+    top: 0px;
+    left: -250px;
+}
+
+#background2 {
+    /* translate: rotate(180deg); */
+    transform: rotate(180deg);
+    right: -250px;
+    bottom: 0px;
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    /* height: auto;
+    width: auto; */
+    /* border: 2px solid green; */
+    flex-direction: column;
+    background-color: var(--Light-Grayish-Violet);
+}
+
+.mobile {
+    height: auto;
+    width: 300px;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    background-color: var(--White);
+    padding: .5rem;
+    border-radius: 35px;
+    box-shadow: 0 0 40px rgb(182, 182, 182);
+    margin-top: 5rem;
+    z-index: 3;
+}
+
+.top {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    background: linear-gradient(to right, var(--Light-Violet), var(--Light-Magenta));
+    border-radius: 30px 30px 10px 10px;
+
+}
+
+.top ul {
+    list-style: none;
+}
+
+.notch {
+    width: 55%;
+    height: 1.2rem;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+.profilebar {
+    /* background-color: rgb(196, 126, 126); */
+    width: inherit;
+    padding: .2rem 1rem;
+    display: flex;
+    align-items: center;
+    color: hsl(274, 100%, 91%);
+}
+
+.profilebar p {
+    color: var(--Pale-Violet);
+}
+
+.profilebar img {
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 .6rem;
+}
+
+.profilebar span {
+    color: transparent;
+    text-shadow: 0 0 0 white;
+    font-size: x-large;
+}
+
+.profilebar #span2 {
+    margin-left: auto;
+    font-size: large;
+}
+
+.bottom {
+    background-color: var(--Light-Grayish-Violet);
+    flex-direction: column;
+    padding-top: .5rem;
+    border-radius: 0 0 30px 30px;
+}
+
+.msgreceived {
+    height: auto;
+    width: 60%;
+    padding: .5rem;
+    margin: 0 0 .5rem .5rem;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid orchid; */
+    font-size: 12px;
+    background-color: hsl(271, 95%, 92%);
+    color: var(--Moderate-Violet);
+    border-radius: 20px;
+    /* justify-self: flex-start; */
+    align-self: flex-start;
+}
+
+.imgsent {
+    width: 60%;
+    /* border: 2px solid salmon; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: self-end;
+    margin: 0 .5rem .5rem 0;
+}
+
+.imgsent img {
+    width: 3.2rem;
+    border-radius: 20px;
+}
+
+.msgsent {
+    width: auto;
+    max-width: 60%;
+    background-color: var(--White);
+    margin: 0 .5rem .5rem 0;
+    align-self: flex-end;
+    padding: .5rem;
+    font-size: 12px;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgb(215, 215, 215);
+    color: var(--Desaturated-Dark-Violet);
+}
+
+.ratemsg {
+    /* border: 2px solid red; */
+    width: 70%;
+    height: auto;
+    align-self: flex-start;
+    margin: 0 0 .5rem .5rem;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, var(--Light-Violet), var(--Light-Magenta));
+    border-radius: 20px;
+    color: hsl(274, 100%, 91%);
+    box-shadow: 0 5px 5px rgb(208, 208, 208);
+}
+
+.ratemsg .leftring {
+    height: .8rem;
+    width: .8rem;
+    border-radius: 50%;
+    margin-right: .8rem;
+    box-shadow: 0 0 0 2px hsl(275, 32%, 76%);
+}
+
+.ratemsg .rate {
+    margin-left: auto;
+    margin-right: .5rem;
+    font-weight: 700;
+    color: rgb(241, 240, 240);
+    font-size: large;
+}
+
+.messagebar {
+    /* border: 2px solid red; */
+    margin: .5rem .5rem .5rem .5rem;
+    width: calc(100% - 1.6rem);
+    height: 2.8rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: .5rem;
+    background-color: var(--White);
+    color: var(--Grayish-Blue);
+}
+
+.messagebar p {
+    font-size: 14px;
+}
+
+.messagebar .rightcircle {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+.messagebar .rightcircle span {
+    font-size: xx-large;
+    font-weight: 700;
+    color: rgb(236, 236, 236);
+    margin-left: .2rem;
+    margin-bottom: .1rem;
+}
+
+.remaining {
+    /* border: 2px solid red; */
+    text-align: center;
+    margin: 5rem 2rem;
+    max-width: 500px;
+    z-index: 3;
+}
+
+.remaining h1 {
+    font-size: 45px;
+    color: var(--Very-Dark-Desaturated-Violet);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.remaining h3 {
+    color: var(--Dark-Grayish-Violet);
+    font-weight: 550;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+.attribution a:hover{
+    color: hsl(228, 51%, 64%);
+}
+@media only screen and (min-width:1000px) {
+    .container {
+        flex-direction: row;
+        height: 100vh;
+        gap: 5rem;
+    }
+
+    #background1 {
+        left: -50px;
+    }
+
+    #background2 {
+        right: -100px;
+        bottom: 0px;
+    }
+
+    .mobile {
+        margin-top: 0;
+    }
+
+    .remaining {
+        text-align: start;
+    }
+}
